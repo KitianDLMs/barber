@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "918717660514",
-    "project_id": "barber-ba330",
-    "storage_bucket": "barber-ba330.appspot.com"
+    "project_number": "320550566678",
+    "project_id": "barber-8b2b2",
+    "storage_bucket": "barber-8b2b2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:918717660514:android:37c605462e74fc5d53003b",
+        "mobilesdk_app_id": "1:320550566678:android:70eb209919b9294f02ae37",
         "android_client_info": {
           "package_name": "com.echnelapp.barber"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGcl6ubKAHw38NIOACONiUU_efMk-u8zY"
+          "current_key": "AIzaSyBSBCKHtNx6HJLyhx3hmwEZJZuL8RXgFuo"
         }
       ],
       "services": {

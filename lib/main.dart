@@ -1,15 +1,24 @@
+import 'dart:io';
+
+import 'package:barber/pages/signin.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/booking.dart';
-import 'pages/home.dart';
-import 'pages/login.dart';
-import 'pages/onboarding.dart';
-import 'pages/signup.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  Platform.isAndroid 
+  ?
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+        apiKey: 'AIzaSyBSBCKHtNx6HJLyhx3hmwEZJZuL8RXgFuo',
+        appId: '1:320550566678:android:70eb209919b9294f02ae37',
+        messagingSenderId: 'sendid',
+        projectId: 'barber-8b2b2',
+        storageBucket: 'myapp-b9yt18.appspot.com',
+      )
+    ) 
+  :
+    await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -25,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Home(),
+      home: SignIn(),      
     );
   }
 }
@@ -43,10 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image:
                   DecorationImage(image: AssetImage('assets/images/my_bg.png')),
             ),
-            child: Column(children: [Center(child: Text('Ok'))])));
+            child: const Column(children: [Center(child: Text('Ok'))])));
   }
 }
